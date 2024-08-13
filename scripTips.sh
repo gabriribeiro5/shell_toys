@@ -40,7 +40,9 @@ echo "myList items count: ${#mundo[0]} elements"
 set | grep FilterReference # <set> busca variaveis de ambiente e <grep> faz uma filtragem dos resultados que contenham FilterReference
 
 # 2.2 Buscar comandos executados recentemente
+fc -l RefString # retorna comandos recentes que contenham RefString
 
+fc -l First Last # retorna um range onde First é referencia para o primeiro comando desse range, assim como Last é para o ultimo comando retornado na lista
 
 # 3. ESCRITA / RETORNO / OUTPUT
 echo $myVar   # print do valor da variável
