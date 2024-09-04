@@ -31,7 +31,7 @@ unset $myVar # apaga a variável
 
 # 1.4 MANIPULAÇÃO DE ARRAYS
 
-newlinemyList=("item1" "item2" "3rdItem") 
+myList=("item1" "item2" "3rdItem") 
 echo "myList items count: ${#mundo[0]} elements"
 
 ### 2. BUSCA ###
@@ -46,6 +46,25 @@ fc -l First Last # retorna um range onde First é referencia para o primeiro com
 
 ### 3. ESCRITA / RETORNO / OUTPUT ###
 echo $myVar   # print do valor da variável
+
+### 4. LEITURA ###
+# ler arquivo (https://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash)
+	while read p; do
+	  echo "$p"
+	done < path/to/file.txt
+
+# ou
+	while IFS="" read -r p || [ -n "$p" ]
+	do
+	  printf '%s\n' "$p"
+	done < path/to/file.txt
+
+# ou
+	while read -u 10 p; do
+	  ...
+	done 10 < path/to/file.txt
+
+# fonte: https://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash
 
 ### 4. NAVEGAÇÃO / FILE SYSTEM ###
 cd path/to/file # Change Directory
