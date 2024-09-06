@@ -1,10 +1,10 @@
 #!/bin/bash
 
 :<<'INFO'
- Este é um comentário de várias linhas, a chave 'INFO' é declarada
+Este é um comentário de várias linhas, a chave 'INFO' é declarada
   no início e utilizada para definir o fim do comentário.
 
- O cabeçalho acima <#! /bin/bash> indica qual programa (do diretorio
+O cabeçalho acima <#! /bin/bash> indica qual programa (do diretorio
   /bin) será utilizado para tratar o conteúdo deste arquivo.
   Poderia ser <#! /bin/sh>, <#! /bin/cat> ou, ainda, <#! /bin/vim>
 INFO
